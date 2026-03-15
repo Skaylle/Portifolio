@@ -18,7 +18,7 @@ const translations = {
     'nav.contact': 'Contato',
     
     // Hero
-    'hero.name': 'Seu Nome Aqui',
+    'hero.name': 'Skaylle de Sousa Barreto',
     'hero.title': 'Desenvolvedor Full Stack',
     'hero.subtitle': 'Transformando ideias em código limpo e soluções digitais inovadoras',
     'hero.contact': 'Entre em Contato',
@@ -61,7 +61,7 @@ const translations = {
     'skills.problem.desc': 'Abordagem analítica para identificar e resolver desafios técnicos complexos.',
     
     // Projects
-    'projects.title': 'Projetos em Destaque',
+    // 'projects.title': 'Projetos em Destaque', // Comentado para futura implementação
     'projects.subtitle': 'Alguns dos projetos que desenvolvi ao longo da minha jornada',
     'projects.p1.title': 'E-Commerce Platform',
     'projects.p1.desc': 'Plataforma completa de e-commerce com carrinho de compras, pagamento integrado e painel administrativo.',
@@ -153,7 +153,7 @@ const translations = {
     'skills.problem.desc': 'Analytical approach to identify and solve complex technical challenges.',
     
     // Projects
-    'projects.title': 'Featured Projects',
+    // 'projects.title': 'Featured Projects', // Commented out for future implementation
     'projects.subtitle': 'Some of the projects I developed throughout my journey',
     'projects.p1.title': 'E-Commerce Platform',
     'projects.p1.desc': 'Complete e-commerce platform with shopping cart, integrated payment and administrative panel.',

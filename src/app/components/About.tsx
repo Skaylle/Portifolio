@@ -47,10 +47,7 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              {t('about.p1')}
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              {t('about.p2')}
+              Engenheiro de Software com mais de 6 anos de experiência no desenvolvimento e manutenção de sistemas web corporativos. Forte atuação com PHP e frameworks modernos como Symfony, Laravel, Zend e Yii2, além de experiência com React e Vue no front-end. Vivência com bancos de dados SQLServer, PostgreSQL, MySQL e Oracle. Experiência em sustentação de sistemas legados, implementação de melhorias evolutivas, correção de bugs críticos e otimização de consultas SQL. Perfil analítico, com facilidade para atuar em ambientes corporativos complexos, versionamento com Git, uso de Docker e trabalho colaborativo em times ágeis.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">

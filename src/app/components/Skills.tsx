@@ -2,12 +2,50 @@ import { motion } from 'motion/react';
 import { Code2, Database, Palette, Settings, MessageSquare, Users, Clock, Lightbulb } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const technicalSkills = [
-  { name: 'React & Next.js', level: 90, icon: Code2 },
-  { name: 'TypeScript', level: 85, icon: Code2 },
-  { name: 'Node.js & Express', level: 80, icon: Settings },
-  { name: 'SQL & NoSQL', level: 75, icon: Database },
-  { name: 'UI/UX Design', level: 70, icon: Palette },
+
+const skillsColumns = [
+  {
+    icon: <Settings className="mx-auto mb-2 text-cyan-400" size={32} />, // Backend
+    title: 'Backend',
+    items: [
+      'PHP',
+      'Laravel',
+      'Zend Framework',
+      'Symfony',
+    ],
+  },
+  {
+    icon: <Code2 className="mx-auto mb-2 text-cyan-400" size={32} />, // Frontend
+    title: 'Frontend',
+    items: [
+      'AngularJS',
+      'Vue.js / Vue 3',
+      'React',
+      'JavaScript',
+      'TypeScript',
+    ],
+  },
+  {
+    icon: <Database className="mx-auto mb-2 text-cyan-400" size={32} />, // Banco de Dados
+    title: 'Banco de Dados',
+    items: [
+      'PostgreSQL',
+      'MySQL',
+      'SQL Server',
+      'Oracle',
+      'Doctrine ORM',
+    ],
+  },
+  {
+    icon: <Settings className="mx-auto mb-2 text-cyan-400" size={32} />, // DevOps & Tools
+    title: 'DevOps & Tools',
+    items: [
+      'Docker',
+      'Docker Compose',
+      'Git / SVN',
+      'Linux',
+    ],
+  },
 ];
 
 export function Skills() {
@@ -50,52 +88,32 @@ export function Skills() {
             {t('skills.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto"></div>
+          <p className="text-gray-400 mt-4 text-lg">
+            Tecnologias e ferramentas que domino para criar soluções robustas e escaláveis
+          </p>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Technical Skills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
-              {t('skills.technical')}
-            </h3>
-            <div className="space-y-6">
-              {technicalSkills.map((skill, index) => {
-                const Icon = skill.icon;
-                return (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center gap-3 mb-2">
-                      <Icon className="text-cyan-400" size={20} />
-                      <span className="text-white font-medium">{skill.name}</span>
-                      <span className="ml-auto text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="h-full bg-gradient-to-r from-cyan-500 to-blue-500"
-                      />
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {skillsColumns.map((col, idx) => (
+              <div key={col.title} className="bg-white/90 dark:bg-slate-900/80 rounded-xl p-8 text-center shadow-md flex flex-col items-center">
+                {col.icon}
+                <h3 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">{col.title}</h3>
+                <ul className="space-y-2 text-left w-full">
+                  {col.items.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-slate-700 dark:text-gray-200">
+                      <span className="inline-block w-2 h-2 rounded-full bg-cyan-500 mr-2"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
 
-          {/* Soft Skills */}
+        {/* Soft Skills - Mantido abaixo, se desejar exibir */}
+        <div className="max-w-6xl mx-auto mt-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

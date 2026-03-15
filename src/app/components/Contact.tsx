@@ -105,6 +105,7 @@ export function Contact() {
             </div>
 
             <div className="space-y-6">
+
               <div className="flex items-start gap-4">
                 <div className="bg-cyan-500/10 p-3 rounded-lg">
                   <Mail className="text-cyan-400" size={24} />
@@ -112,10 +113,10 @@ export function Contact() {
                 <div>
                   <h4 className="text-white font-medium mb-1">{t('contact.email')}</h4>
                   <a
-                    href="mailto:seu-email@example.com"
+                    href="mailto:skayllebarreto@outlook.com"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
-                    seu-email@example.com
+                    skayllebarreto@outlook.com
                   </a>
                 </div>
               </div>
@@ -127,10 +128,10 @@ export function Contact() {
                 <div>
                   <h4 className="text-white font-medium mb-1">{t('contact.phone')}</h4>
                   <a
-                    href="tel:+5511999999999"
+                    href="tel:+5561993815525"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
-                    +55 (11) 99999-9999
+                    (61) 99381-5525
                   </a>
                 </div>
               </div>
@@ -142,7 +143,7 @@ export function Contact() {
                 <div>
                   <h4 className="text-white font-medium mb-1">{t('contact.location')}</h4>
                   <p className="text-gray-400">
-                    {t('contact.location.value')}
+                    Brasília, DF
                   </p>
                 </div>
               </div>

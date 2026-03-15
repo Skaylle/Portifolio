@@ -10,23 +10,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-center space-y-6">
           <div className="flex gap-6">
             <a
-              href="https://github.com/seu-usuario"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://linkedin.com/in/seu-perfil"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="mailto:seu-email@example.com"
+              href="mailto:skayllebarreto@outlook.com"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
             >
               <Mail size={24} />
@@ -35,9 +19,14 @@ export function Footer() {
 
           <div className="text-center">
             <p className="text-gray-400 flex items-center gap-2">
-              {t('footer.made')} <Heart className="text-cyan-400" size={16} fill="currentColor" /> {t('footer.by')}
+              Feito com <Heart className="text-cyan-400" size={16} fill="currentColor" /> por Skaylle de Sousa Barreto
             </p>
             <p className="text-gray-500 text-sm mt-2">
+              Email: skayllebarreto@outlook.com<br />
+              Telefone: (61) 99381-5525<br />
+              Brasília, DF
+            </p>
+            <p className="text-gray-500 text-xs mt-2">
               {t('footer.rights')}
             </p>
           </div>

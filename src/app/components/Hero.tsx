@@ -48,10 +48,14 @@ export function Hero() {
             >
               {t('hero.contact')}
             </a>
-            <button className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-colors font-medium flex items-center gap-2">
+            <a
+              href="/Curriculo_Skaylle_Barreto.pdf"
+              download
+              className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-colors font-medium flex items-center gap-2"
+            >
               <Download size={20} />
               {t('hero.download')}
-            </button>
+            </a>
           </motion.div>
 
           <motion.div
