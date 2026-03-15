@@ -10,6 +10,22 @@ export function Footer() {
         <div className="flex flex-col items-center justify-center space-y-6">
           <div className="flex gap-6">
             <a
+              href="https://github.com/Skaylle"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-cyan-400 transition-colors"
+            >
+              <Github size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/skaylle-barreto-256474131/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-cyan-400 transition-colors"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a
               href="mailto:skayllebarreto@outlook.com"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
             >

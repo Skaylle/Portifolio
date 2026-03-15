@@ -49,7 +49,7 @@ export function Hero() {
               {t('hero.contact')}
             </a>
             <a
-              href="/Curriculo_Skaylle_Barreto.pdf"
+              href="/Portifolio/Curriculo_Skaylle_Barreto.pdf"
               download
               className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-colors font-medium flex items-center gap-2"
             >
@@ -65,7 +65,7 @@ export function Hero() {
             className="flex justify-center gap-6"
           >
             <a
-              href="https://github.com/seu-usuario"
+              href="https://github.com/Skaylle"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
@@ -73,7 +73,7 @@ export function Hero() {
               <Github size={28} />
             </a>
             <a
-              href="https://linkedin.com/in/seu-perfil"
+              href="https://www.linkedin.com/in/skaylle-barreto-256474131/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
@@ -81,7 +81,7 @@ export function Hero() {
               <Linkedin size={28} />
             </a>
             <a
-              href="mailto:seu-email@example.com"
+              href="mailto:skayllebarreto@outlook.com"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
             >
               <Mail size={28} />
