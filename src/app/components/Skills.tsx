@@ -12,6 +12,7 @@ const skillsColumns = [
       'Laravel',
       'Zend Framework',
       'Symfony',
+      'Yii2',
     ],
   },
   {
