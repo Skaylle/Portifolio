@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Mail, MapPin, Phone, Send, RefreshCw } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function Contact() {
@@ -29,7 +30,7 @@ export function Contact() {
     generateCaptcha();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
     setSuccessMessage('');
@@ -48,16 +49,32 @@ export function Contact() {
       return;
     }
 
-    // Simulate sending
     setIsSubmitting(true);
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    try {
+      // Lê as variáveis do .env
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        publicKey
+      );
       setSuccessMessage(t('contact.success'));
       setFormData({ name: '', email: '', message: '' });
       setLastSubmitTime(currentTime);
-      setIsSubmitting(false);
       generateCaptcha();
-    }, 1500);
+    } catch (error) {
+      setErrorMessage(t('contact.error.send'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
