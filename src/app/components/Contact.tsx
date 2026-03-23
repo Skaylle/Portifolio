@@ -71,6 +71,7 @@ export function Contact() {
       setLastSubmitTime(currentTime);
       generateCaptcha();
     } catch (error) {
+      console.error('Error sending email:', error);
       setErrorMessage(t('contact.error.send'));
     } finally {
       setIsSubmitting(false);
